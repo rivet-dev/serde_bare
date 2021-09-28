@@ -1,7 +1,12 @@
 #![forbid(unsafe_code)]
 //! # serde_bare
 //!
-//! An implementation of the BARE (<https://baremessages.org>) encoding format draft.
+//! An implementation of the [BARE](https://baremessages.org) encoding format draft for Rust
+//! using [Serde](https://serde.rs).
+//!
+//! Mailing list: https://lists.sr.ht/~tdeo/serde_bare
+//!
+//! Ticket tracker: https://todo.sr.ht/~tdeo/serde_bare
 //!
 //! ## Mapping from the Serde data model
 //!
