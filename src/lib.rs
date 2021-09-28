@@ -100,16 +100,16 @@ pub mod ser;
 #[cfg(feature = "std")]
 pub use de::from_reader;
 #[doc(inline)]
-pub use de::{from_slice, Deserializer};
+pub use de::from_slice;
 
 #[doc(inline)]
-pub use error::{Error, Result};
+pub use error::Result;
 
 #[doc(inline)]
 pub use ser::to_vec;
 #[doc(inline)]
 #[cfg(feature = "std")]
-pub use ser::{to_writer, Serializer};
+pub use ser::to_writer;
 
 #[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq)]
 pub struct Uint(pub u64);
