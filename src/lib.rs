@@ -90,7 +90,9 @@ extern crate std as test_std;
 extern crate alloc as std;
 
 #[cfg(all(not(feature = "alloc"), not(feature = "std")))]
-compile_error!("compiling without one of either `std` or `alloc` features enabled is not supported yet");
+compile_error!(
+    "compiling without one of either `std` or `alloc` features enabled is not supported yet"
+);
 
 pub mod de;
 pub mod error;
