@@ -113,14 +113,8 @@ pub use ser::to_vec;
 #[cfg(feature = "std")]
 pub use ser::to_writer;
 
-#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq)]
+#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Default)]
 pub struct Uint(pub u64);
-
-impl Default for Uint {
-    fn default() -> Uint {
-        Uint(0)
-    }
-}
 
 impl serde::ser::Serialize for Uint {
     fn serialize<S>(&self, serializer: S) -> core::result::Result<S::Ok, S::Error>
@@ -200,14 +194,8 @@ impl<'de> serde::de::Deserialize<'de> for Uint {
     }
 }
 
-#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq)]
+#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Default)]
 pub struct Int(pub i64);
-
-impl Default for Int {
-    fn default() -> Int {
-        Int(0)
-    }
-}
 
 impl serde::ser::Serialize for Int {
     fn serialize<S>(&self, serializer: S) -> core::result::Result<S::Ok, S::Error>
