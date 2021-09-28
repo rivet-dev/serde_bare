@@ -1,0 +1,23 @@
+image: archlinux
+packages:
+  - rustup
+  - go
+sources:
+  - https://git.sr.ht/~tdeo/serde_bare
+tasks:
+  - setup: |
+      rustup toolchain install stable
+      rustup component add clippy
+      rustup default stable
+  - build: |
+      cd serde_bare
+      cargo build --release --no-default-features --features=alloc
+      cargo build --release
+  - test: |
+      cd serde_bare
+      cargo fmt -- --check
+      cargo clippy -- -D warnings
+      cargo test
+  - bench: |
+      cd serde_bare/benches
+      make bench-all
