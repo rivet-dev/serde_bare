@@ -7,10 +7,12 @@ Ticket tracker: https://todo.sr.ht/~tdeo/serde_bare
 
 To run benchmarks on your system:
 
+    cd benches
     make bench
 
 Or to run the reference Go benchmarks as well:
 
+    cd benches
     make bench-all
 
 Licensed under either of Apache License, Version 2.0 or MIT license at your option.
