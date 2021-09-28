@@ -399,7 +399,7 @@ where
                 V: de::DeserializeSeed<'de>,
             {
                 self.1 -= 1;
-                Ok(seed.deserialize(&mut *self.0)?)
+                seed.deserialize(&mut *self.0)
             }
         }
 

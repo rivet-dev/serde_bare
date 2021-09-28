@@ -190,7 +190,7 @@ where
     /// BARE type \[len\]type is never used for variable-length sequences
     /// Error::SequenceLengthRequired if len is None
     fn serialize_seq(self, len: Option<usize>) -> Result<Self::SerializeSeq, Self::Error> {
-        Uint(len.ok_or(Error::sequence_length_required())? as u64).serialize(&mut *self)?;
+        Uint(len.ok_or_else(Error::sequence_length_required)? as u64).serialize(&mut *self)?;
         Ok(self)
     }
 
@@ -226,7 +226,7 @@ where
     /// BARE type: map\[T\]U
     /// Error::MapLengthRequired if len is None
     fn serialize_map(self, len: Option<usize>) -> Result<Self::SerializeMap, Self::Error> {
-        Uint(len.ok_or(Error::map_length_required())? as u64).serialize(&mut *self)?;
+        Uint(len.ok_or_else(Error::map_length_required)? as u64).serialize(&mut *self)?;
         Ok(self)
     }
 
