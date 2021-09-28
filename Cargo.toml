@@ -10,8 +10,17 @@ keywords = ["serde", "bare"]
 categories = ["encoding"]
 exclude = ["benches/go-reference"]
 
+[features]
+default = ["std"]
+std = ["serde/std"]
+alloc = ["serde/alloc"]
+
 [dependencies]
-serde = "1.0"
+serde = { version = "1", default_features = false }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+rustdoc-args = ["--cfg", "docsrs"]
 
 [workspace]
 members = ["benches"]
