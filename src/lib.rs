@@ -1,7 +1,7 @@
 #![forbid(unsafe_code)]
 //! # serde_bare
 //!
-//! An implementation of the BARE (https://baremessages.org) encoding format draft.
+//! An implementation of the BARE (<https://baremessages.org>) encoding format draft.
 //!
 //! ## Mapping from the Serde data model
 //!
