@@ -6,7 +6,7 @@ license = "MIT OR Apache-2.0"
 edition = "2018"
 description = "An implementation of the BARE (https://baremessages.org) encoding format."
 repository = "https://git.sr.ht/~tdeo/serde_bare"
-keywords = ["serde", "bare"]
+keywords = ["serde", "bare", "no_std"]
 categories = ["encoding"]
 exclude = ["benches/go-reference"]
 
