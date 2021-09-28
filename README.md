@@ -1,19 +1,24 @@
-serde_bare
+# serde_bare
 
 An implementation of the BARE (https://baremessages.org) encoding format draft.
+
+[![builds.sr.ht status](https://builds.sr.ht/~tdeo/serde_bare.svg)](https://builds.sr.ht/~tdeo/serde_bare?)
 
 Mailing list: https://lists.sr.ht/~tdeo/serde_bare
 Ticket tracker: https://todo.sr.ht/~tdeo/serde_bare
 
 To run benchmarks on your system:
 
-    cd benches
-    make bench
+```sh
+cd benches
+make bench
 
 Or to run the reference Go benchmarks as well:
 
-    cd benches
-    make bench-all
+```sh
+cd benches
+make bench-all
+```
 
 Licensed under either of Apache License, Version 2.0 or MIT license at your option.
 
