@@ -1,0 +1,15 @@
+[package]
+name = "benches"
+version = "0.0.0"
+edition = "2018"
+
+[dev-dependencies]
+serde_bare = { path = "../" }
+serde = "1"
+serde_derive = "1"
+serde_bytes = "0.11"
+criterion = "0.3"
+
+[[bench]]
+name = "user_sessions"
+harness = false
