@@ -4,13 +4,15 @@
 
 An implementation of the [BARE](https://baremessages.org) encoding format draft for Rust using [Serde](https://serde.rs).
 
-BARE is a simple and easy to implement non-self-describing binary serialization format.  
+BARE is a simple and easy to implement non-self-describing binary serialization format.
+
 It has similarities with [Bincode](https://github.com/bincode-org/bincode), but BARE is designed to be usable from programming languages other than Rust.
 
 ## Links
 
-Mailing list: https://lists.sr.ht/~tdeo/serde_bare  
-Ticket tracker: https://todo.sr.ht/~tdeo/serde_bare  
+Mailing list: https://lists.sr.ht/~tdeo/serde_bare
+
+Ticket tracker: https://todo.sr.ht/~tdeo/serde_bare
 
 ## Stability
 
