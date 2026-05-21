@@ -120,7 +120,7 @@ pub use ser::to_vec;
 #[cfg(feature = "std")]
 pub use ser::to_writer;
 
-#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Default)]
+#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Hash, Default)]
 pub struct Uint(pub u64);
 
 impl serde::ser::Serialize for Uint {
@@ -201,7 +201,7 @@ impl<'de> serde::de::Deserialize<'de> for Uint {
     }
 }
 
-#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Default)]
+#[derive(Copy, Clone, Debug, Ord, PartialOrd, Eq, PartialEq, Hash, Default)]
 pub struct Int(pub i64);
 
 impl serde::ser::Serialize for Int {
